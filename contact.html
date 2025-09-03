@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="description" content="Contáctanos - Ponte en contacto con nuestro equipo para consultas, sugerencias o soporte.">
+    <meta name="keywords" content="contacto, soporte, consultas, sugerencias, inflación">
+    <title>Contacto</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contacto</h1>
+        </header>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <a href="contact.html">Contacto</a>
+            <a href="privacy.html">Política de Privacidad</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <article class="content-article">
+            <h2>Formulario de Contacto</h2>
+            <form class="contact-form">
+                <div class="input-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="calculate-btn">Enviar</button>
+            </form>
+        </article>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

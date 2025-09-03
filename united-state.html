@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mobile Responsiveness -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Referrer Policy (Fixing Incorrect Syntax) -->
+    <meta name="referrer" content="always">
+    <!-- SEO Meta Description -->
+    <meta name="description" content="US Inflation Calculator - A simple tool to understand the impact of inflation on your money. Enter values and get precise results instantly.">
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="inflation calculator, United States, economic calculator, US inflation, financial tool, dollar inflation">
+    <!-- Page Title -->
+    <title>US Inflation Calculator.</title>
+    <!-- Canonical Tag (Ensures Correct URL Indexing) -->
+    <link href="" rel="canonical" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>US Inflation Calculator</h1>
+        </header>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <a href="contact.html">Contacto</a>
+            <a href="privacy.html">Política de Privacidad</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+
+        <!-- Country Dropdown Menu -->
+        <div class="country-selector">
+            <label for="country-dropdown">Select Country:</label>
+            <select id="country-dropdown" onchange="redirectToCountry()">
+                <option value="index.html">Calculadora de Inflación Argentina</option>
+                <option value="calculadora-ipc-chile.html">Calculadora de la inflación de Chile</option>
+                <option value="colombia.html">Calculadora de Inflación de Colombia</option>
+                <option value="mexico.html">Calculadora de Inflación México</option>
+                <option value="paraguay.html">Calculadora de la inflación Paraguay</option>
+                <option value="peru.html">Calculadora de inflación de Perú</option>
+                <option value="uruguay.html">Calculadora de Inflación Uruguay</option>
+                <option value="united-state.html" selected>US Inflation Calculator</option>
+            </select>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="calculator-section">
+            <h2>Calculate the Impact of Inflation in the United States</h2>
+            <div class="calculator-form">
+                <div class="input-group">
+                    <label for="initial-amount">Initial Amount (USD):</label>
+                    <input type="number" id="initial-amount" placeholder="e.g., 10000" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="inflation-rate">Annual Inflation Rate (%):</label>
+                    <input type="number" id="inflation-rate" placeholder="e.g., 2.5" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="years">Number of Years:</label>
+                    <input type="number" id="years" placeholder="e.g., 10" step="1">
+                </div>
+                
+                <button onclick="calculateInflation()" class="calculate-btn">Calculate</button>
+                
+                <div id="result" class="result-section"></div>
+            </div>
+            
+            <!-- CTA Button with do-follow link -->
+            <div class="cta-section">
+                <a href="https://calculadorade-inflacion.com/united-state.html" class="cta-button" rel="dofollow">
+                    US Inflation Calculator
+                </a>
+            </div>
+        </div>
+
+        <!-- Demo Article Content -->
+        <article class="content-article">
+            <h2>How Does Inflation Work in the United States?</h2>
+            <p>The United States has maintained a relatively stable inflation environment, with the Federal Reserve targeting an annual inflation rate of around 2%. This monetary policy framework has helped maintain economic stability and predictable price levels.</p>
+            
+            <h3>Consumer Price Index (CPI) in the US</h3>
+            <p>The Bureau of Labor Statistics (BLS) calculates the CPI monthly, which is the primary inflation indicator in the United States. This index measures the price changes of a representative basket of goods and services consumed by American households.</p>
+            
+            <h3>Factors Influencing US Inflation</h3>
+            <p>US inflation is influenced by factors such as Federal Reserve monetary policy, employment levels, energy prices, housing costs, and global economic conditions. The Fed uses various tools including interest rates to manage inflation and maintain economic stability.</p>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

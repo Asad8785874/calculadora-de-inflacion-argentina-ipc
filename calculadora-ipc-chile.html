@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mobile Responsiveness -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Referrer Policy (Fixing Incorrect Syntax) -->
+    <meta name="referrer" content="always">
+    <!-- SEO Meta Description -->
+    <meta name="description" content="Calculadora de inflación Chile - Una herramienta simple para conocer el impacto de la inflación en tu dinero chileno. Ingresa valores y obtén resultados precisos al instante.">
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="calculadora inflación, Chile, calculadora económica, inflación chilena, herramienta financiera, IPC Chile">
+    <!-- Page Title -->
+    <title>Calculadora de la inflaci&oacute;n de Chile.</title>
+    <!-- Canonical Tag (Ensures Correct URL Indexing) -->
+    <link href="" rel="canonical" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de la inflación de Chile</h1>
+        </header>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <a href="contact.html">Contacto</a>
+            <a href="privacy.html">Política de Privacidad</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+
+        <!-- Country Dropdown Menu -->
+        <div class="country-selector">
+            <label for="country-dropdown">Seleccionar País:</label>
+            <select id="country-dropdown" onchange="redirectToCountry()">
+                <option value="index.html">Calculadora de Inflación Argentina</option>
+                <option value="calculadora-ipc-chile.html" selected>Calculadora de la inflación de Chile</option>
+                <option value="colombia.html">Calculadora de Inflación de Colombia</option>
+                <option value="mexico.html">Calculadora de Inflación México</option>
+                <option value="paraguay.html">Calculadora de la inflación Paraguay</option>
+                <option value="peru.html">Calculadora de inflación de Perú</option>
+                <option value="uruguay.html">Calculadora de Inflación Uruguay</option>
+                <option value="united-state.html">US Inflation Calculator</option>
+            </select>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="calculator-section">
+            <h2>Calcular el Impacto de la Inflación en Chile</h2>
+            <div class="calculator-form">
+                <div class="input-group">
+                    <label for="initial-amount">Monto Inicial (CLP):</label>
+                    <input type="number" id="initial-amount" placeholder="Ej: 1000000" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="inflation-rate">Tasa de Inflación Anual (%):</label>
+                    <input type="number" id="inflation-rate" placeholder="Ej: 3.2" step="0.01">
+                </div>
+                
+                <div class="input-group">
+                    <label for="years">Número de Años:</label>
+                    <input type="number" id="years" placeholder="Ej: 10" step="1">
+                </div>
+                
+                <button onclick="calculateInflation()" class="calculate-btn">Calcular</button>
+                
+                <div id="result" class="result-section"></div>
+            </div>
+            
+            <!-- CTA Button with do-follow link -->
+            <div class="cta-section">
+                <a href="https://calculadorade-inflacion.com/calculadora-ipc-chile.html" class="cta-button" rel="dofollow">
+                    Calculadora de Inflación Chile
+                </a>
+            </div>
+        </div>
+
+        <!-- Demo Article Content -->
+        <article class="content-article">
+            <h2>¿Cómo Funciona la Inflación en Chile?</h2>
+            <p>Chile ha mantenido históricamente una política monetaria estable que ha resultado en tasas de inflación relativamente controladas. El Banco Central de Chile utiliza un sistema de metas de inflación para mantener la estabilidad de precios en el país.</p>
+            
+            <h3>Índice de Precios al Consumidor (IPC) en Chile</h3>
+            <p>El IPC es el principal indicador de inflación en Chile, calculado mensualmente por el Instituto Nacional de Estadísticas (INE). Este índice mide la variación de precios de una canasta representativa de bienes y servicios que consumen los hogares chilenos.</p>
+            
+            <h3>Factores que Influyen en la Inflación Chilena</h3>
+            <p>La inflación en Chile está influenciada por factores internos como la política monetaria del Banco Central, y externos como los precios del cobre y otros commodities, dado que Chile es una economía exportadora de materias primas.</p>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
